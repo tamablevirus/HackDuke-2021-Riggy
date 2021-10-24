@@ -1,5 +1,5 @@
 /* === Import template variables === */
-@import "./variables";
+@import "variables";
 @import "material-components-web/material-components-web";
 
 
@@ -41,9 +41,9 @@
 /* === Plugin Overides === */
 @import "../shared/components/plugin-overides/code-mirror";
 
-@import './dashboard';
-@import './navbar';
-@import './sidebar';
-@import './footer';
-@import './layout';
+@import 'dashboard';
+@import 'navbar';
+@import 'sidebar';
+@import 'footer';
+@import 'layout';
 @import '../vertical/vertical-wrapper';
