@@ -11,12 +11,9 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 base = os.getcwd()
 app.config['UPLOAD_FOLDER'] = base +'/static'
 
-f = open('secret.json')
-#f_credential = json.loads(os.environ['GOOGLE_APPLICATION_CREDS'])
-f_credential = json.load(f)
-    
+f_credential = json.loads(os.environ['GOOGLE_APPLICATION_CREDS'])
+
 f_credentials = firebase_admin.credentials.Certificate(f_credential)
-f.close()
 fb = firebase_admin.initialize_app(f_credentials, {'databaseURL': 'https://riggy-72c18-default-rtdb.firebaseio.com/'})
 
 from firebase_admin import db as database
