@@ -65,7 +65,7 @@ def isLoggedIn():
 def home():
     if not isLoggedIn():
         return redirect('/login')
-    return 'Hello, World'
+    return render_template('')
 
 @app.route('/signOut')
 def signOutP():
