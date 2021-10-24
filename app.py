@@ -12,6 +12,8 @@ base = os.getcwd()
 app.config['UPLOAD_FOLDER'] = base +'/static'
 
 f_credential = json.loads(os.environ['GOOGLE_APPLICATION_CREDS'])
+
+    
 f_credentials = firebase_admin.credentials.Certificate(f_credential)
 fb = firebase_admin.initialize_app(f_credentials, {'databaseURL': 'https://riggy-72c18-default-rtdb.firebaseio.com/'})
 
